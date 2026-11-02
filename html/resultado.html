@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados - Grand Prix 2026</title>
+    <link rel="stylesheet" href="../style/resultado.css" />
+    <link rel="stylesheet" href="../style/navegacao.css" />
+  </head>
+  <body>
+    <main class="container-resultado">
+      <header class="cabecalho">
+        <p class="subtitulo">Sistema de Avaliação</p>
+
+        <h1>RESULTADOS</h1>
+
+        <h2>GRAND PRIX 2026</h2>
+
+        <p class="texto-oficial">Classificação Geral</p>
+      </header>
+
+      <section id="mensagemResultado" class="mensagem-resultado">
+        Carregando resultados...
+      </section>
+
+      <div id="conteudoResultado" style="display: none">
+
+        <section class="secao-podio">
+          <h3>🏆 PÓDIO</h3>
+
+          <div id="podio" class="podio"></div>
+        </section>
+
+        <hr />
+
+        <section class="secao-ranking">
+          <h3>RANKING COMPLETO</h3>
+
+          <p class="orientacao">
+            Clique em uma escuderia para visualizar o desempenho detalhado.
+          </p>
+
+          <div id="listaRanking" class="lista-ranking"></div>
+        </section>
+      </div>
+
+      <p class="voltar">
+        <a href="escuderias.html"> ← Voltar para Escuderias </a>
+      </p>
+      <a class="btn-pagina-inicial" href="paginaInicial.html">Voltar para a página inicial</a>
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/resultado.js"></script>
+  </body>
+</html>

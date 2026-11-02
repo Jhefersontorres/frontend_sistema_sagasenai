@@ -1,0 +1,469 @@
+body {
+  background-image: url("../assets/tela-de-fundo-padrao.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("../assets/tela-de-fundo-padrao-mobile.png");
+
+    align-items: flex-start;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    box-sizing: border-box;
+  }
+}
+
+.container-inicial {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 15px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 40px rgba(16, 44, 117, 0.15);
+
+  max-width: 900px;
+  width: 90%;
+
+  position: relative;
+
+  box-sizing: border-box;
+}
+
+.titulo-sistema {
+  color: #f05a24;
+
+  margin: 0 0 5px 0;
+
+  font-size: 40px;
+
+  text-transform: uppercase;
+
+  font-weight: bolder;
+
+  letter-spacing: 0.5px;
+}
+
+.subtitulo-sistema {
+  color: #102c75;
+
+  margin: 0 0 35px 0;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+
+#avaliadorLogado {
+  color: #ccc;
+
+  font-weight: bold;
+
+  margin-bottom: 25px;
+}
+
+.area-avaliacoes {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+
+  align-items: start;
+
+  width: 100%;
+}
+
+.bloco-busca {
+  background-color: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 15px;
+
+  padding: 25px;
+
+  box-shadow: 0 10px 40px rgba(16, 44, 117, 0.15);
+
+  box-sizing: border-box;
+
+  min-height: 250px;
+}
+
+.bloco-minhas-avaliacoes {
+  background-color: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 15px;
+
+  padding: 25px;
+
+  box-shadow: 0 10px 40px rgba(16, 44, 117, 0.15);
+
+  box-sizing: border-box;
+
+  min-height: 250px;
+}
+
+#minhasAvaliacoes p{
+  color: #102c75;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.bloco-busca h3,
+.bloco-minhas-avaliacoes h3 {
+  color: #102c75;
+
+  margin: 0 0 20px 0;
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+.container-inicial input[type="text"] {
+  padding: 12px 16px;
+
+  width: 100%;
+
+  font-size: 15px;
+
+  color: #333;
+
+  background-color: #fff;
+
+  border-radius: 6px;
+
+  border: 1px solid #ccc;
+
+  box-sizing: border-box;
+
+  outline: none;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.container-inicial input[type="text"]:focus {
+  border-color: #f05a24;
+
+  box-shadow: 0 0 5px rgba(240, 90, 36, 0.3);
+}
+
+#btnBuscar {
+  background-color: #102c75;
+
+  margin: 15px 0;
+
+  color: #f0f0f0;
+
+  width: 100%;
+
+  padding: 12px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+#btnBuscar:hover {
+  background-color: #0b1e52;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 20px rgba(16, 44, 117, 0.3);
+}
+
+ul#listaEscuderias {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background-color: white;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 5px 0 0 0;
+
+  z-index: 1000;
+
+  overflow: hidden;
+}
+
+ul#listaEscuderias li {
+  padding: 14px 15px;
+
+  color: #333;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  border-bottom: 1px solid #f5f5f5;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  line-height: 1.5;
+
+  transition: all 0.2s ease;
+}
+
+ul#listaEscuderias li:last-child {
+  border-bottom: none;
+}
+
+ul#listaEscuderias li:hover {
+  background-color: #f7f7f7;
+}
+
+
+.escuderia-nao-avaliada {
+  border-left: 5px solid #102c75;
+}
+
+.escuderia-nao-avaliada span {
+  color: #102c75;
+
+  font-weight: bold;
+}
+
+.escuderia-andamento {
+  border-left: 5px solid #f05a24;
+}
+
+.escuderia-andamento span,
+.escuderia-andamento small {
+  color: #f05a24;
+
+  font-weight: bold;
+}
+
+.escuderia-concluida {
+  border-left: 5px solid #3ca66b;
+
+  cursor: default !important;
+}
+
+.escuderia-concluida span {
+  color: #25834f;
+
+  font-weight: bold;
+}
+
+.escuderia-concluida:hover {
+  color: #333 !important;
+
+  background-color: #f7f7f7 !important;
+
+  transform: none;
+}
+
+#minhasAvaliacoes {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  width: 100%;
+}
+
+.card-avaliacao {
+  background-color: #fff;
+
+  border: 1px solid #e4e4e4;
+
+  border-radius: 8px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  text-align: left;
+
+  box-shadow: 0 3px 10px rgba(16, 44, 117, 0.08);
+
+  transition: all 0.2s ease;
+}
+
+.card-avaliacao strong {
+  display: block;
+
+  color: #102c75;
+
+  margin-bottom: 8px;
+
+  font-size: 16px;
+}
+
+.card-avaliacao p {
+  color: #444;
+
+  margin: 5px 0;
+
+  font-size: 14px;
+}
+
+.card-avaliacao small {
+  display: block;
+
+  margin-top: 9px;
+
+  font-weight: bold;
+}
+
+.avaliacao-concluida {
+  border-left: 5px solid #3ca66b;
+}
+
+.avaliacao-concluida small {
+  color: #25834f;
+}
+
+.avaliacao-andamento {
+  border-left: 5px solid #f05a24;
+
+  cursor: pointer;
+}
+
+.avaliacao-andamento small {
+  color: #f05a24;
+}
+
+.avaliacao-andamento:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 18px rgba(16, 44, 117, 0.15);
+}
+
+.creditos {
+  width: 100%;
+
+  text-align: center;
+
+  margin: 25px 0 0 0;
+}
+
+.creditos a {
+  color: #7a8294;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  display: inline-block;
+
+  transition: color 0.3s ease;
+}
+
+.creditos a:hover {
+  color: #f05a24;
+}
+
+@media (max-width: 768px) {
+  .container-inicial {
+    width: 92%;
+
+    max-width: 500px;
+
+    padding: 25px 18px;
+  }
+
+  .titulo-sistema {
+    font-size: 32px;
+  }
+
+  .area-avaliacoes {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .bloco-busca,
+  .bloco-minhas-avaliacoes {
+    width: 100%;
+
+    padding: 20px;
+  }
+
+  #avaliadorLogado {
+    font-size: 14px;
+  }
+}
+
+ul#listaEscuderias li,
+ul#listaEscuderias li strong,
+ul#listaEscuderias li p,
+ul#listaEscuderias li span,
+ul#listaEscuderias li small,
+
+.card-avaliacao,
+.card-avaliacao strong,
+.card-avaliacao p,
+.card-avaliacao span,
+.card-avaliacao small {
+    color: #102c75;
+}
+
+.escuderia-concluida span,
+.avaliacao-concluida small {
+    color: #25834f;
+    font-weight: bold;
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Administração - Grand Prix 2026</title>
+
+    <link rel="stylesheet" href="../style/admin.css" />
+    <link rel="stylesheet" href="../style/navegacao.css" />
+  </head>
+
+  <body>
+    <main class="container-admin">
+      <header class="cabecalho-admin">
+        <p class="subtitulo">Sistema de Avaliação</p>
+
+        <h1>ADMINISTRAÇÃO</h1>
+
+        <h2>GRAND PRIX 2026</h2>
+      </header>
+
+      <section class="bloco-admin">
+        <h3>STATUS ATUAL</h3>
+
+        <div id="statusSistema" class="status-sistema">Carregando...</div>
+      </section>
+
+      <!-- DATA -->
+
+      <section class="bloco-admin">
+        <h3>DATA DA DIVULGAÇÃO</h3>
+
+        <p class="descricao">
+          Defina quando a contagem regressiva deverá terminar.
+        </p>
+
+        <input type="datetime-local" id="dataDivulgacao" />
+
+        <button id="btnSalvarData" class="btn-secundario">Salvar Data</button>
+      </section>
+
+      <section class="bloco-admin">
+        <h3>CONTROLE DOS RESULTADOS</h3>
+
+        <div class="grupo-botoes">
+          <button id="btnLiberar" class="btn-liberar">
+            🏆 Liberar Resultados
+          </button>
+
+          <button id="btnFechar" class="btn-fechar">
+            🔒 Fechar Resultados
+          </button>
+        </div>
+
+        <p class="aviso-admin">
+          Ao liberar os resultados, o ranking oficial será registrado e novas
+          avaliações ficarão bloqueadas.
+        </p>
+      </section>
+
+      <p class="voltar">
+        <a href="paginaInicial.html" id="voltarSistema" class="btn-pagina-inicial">Voltar para a página inicial</a>
+      </p>
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

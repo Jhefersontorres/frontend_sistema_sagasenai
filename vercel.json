@@ -1,0 +1,6 @@
+{
+  "buildCommand": "python build_frontend.py",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false
+}

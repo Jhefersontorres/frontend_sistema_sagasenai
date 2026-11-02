@@ -1,0 +1,16 @@
+body {
+  background-image: url(../assets/tela-de-fundo-padrao.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("../assets/tela-de-fundo-padrao-mobile.png");
+  }
+}

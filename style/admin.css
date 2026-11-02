@@ -1,0 +1,283 @@
+body {
+  background-image: url("../assets/tela-de-fundo-padrao.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  min-height: 100vh;
+
+  margin: 0;
+
+  padding: 40px 20px;
+
+  box-sizing: border-box;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.container-admin {
+  width: 90%;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background-color: rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 40px rgba(16, 44, 117, 0.15);
+}
+
+.cabecalho-admin {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.cabecalho-admin .subtitulo {
+  color: #102c75;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin: 0;
+}
+
+.cabecalho-admin h1 {
+  color: #f05a24;
+
+  font-size: 38px;
+
+  margin: 5px 0 0 0;
+}
+
+.cabecalho-admin h2 {
+  color: #102c75;
+
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.bloco-admin {
+  background-color: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  margin-top: 20px;
+
+  box-shadow: 0 5px 18px rgba(16, 44, 117, 0.08);
+}
+
+.bloco-admin h3 {
+  color: #102c75;
+
+  text-align: center;
+
+  margin-top: 0;
+}
+
+.status-aberto,
+.status-fechado {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+}
+
+.status-aberto {
+  background-color: rgba(60, 166, 107, 0.1);
+
+  border-left: 5px solid #3ca66b;
+}
+
+.status-fechado {
+  background-color: rgba(240, 90, 36, 0.08);
+
+  border-left: 5px solid #f05a24;
+}
+
+.status-aberto strong,
+.status-fechado strong {
+  color: #102c75;
+}
+
+.status-aberto p,
+.status-fechado p {
+  color: #555;
+
+  margin: 5px 0 0 0;
+}
+
+.icone-status {
+  font-size: 28px;
+}
+
+.descricao {
+  color: #7a8294;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+#dataDivulgacao {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+#dataDivulgacao:focus {
+  border-color: #f05a24;
+
+  box-shadow: 0 0 5px rgba(240, 90, 36, 0.25);
+}
+
+button {
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.btn-secundario {
+  background-color: #102c75;
+
+  color: white;
+
+  margin-top: 15px;
+}
+
+.btn-liberar {
+  background-color: #3ca66b;
+
+  color: white;
+}
+
+.btn-fechar {
+  background-color: #f05a24;
+
+  color: white;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 18px rgba(16, 44, 117, 0.2);
+}
+
+button:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+.grupo-botoes {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+.aviso-admin {
+  color: #7a8294;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  margin: 18px 0 0 0;
+
+  text-align: center;
+}
+
+.voltar {
+  text-align: center;
+
+  margin-top: 30px;
+}
+
+.voltar a {
+  color: #7a8294;
+
+  text-decoration: none;
+
+  font-weight: 500;
+}
+
+.voltar a:hover {
+  color: #f05a24;
+}
+
+@media (max-width: 650px) {
+  body {
+    background-image: url("../assets/tela-de-fundo-padrao-mobile.png");
+
+    padding: 20px 10px;
+  }
+
+  .container-admin {
+    width: 100%;
+
+    padding: 25px 16px;
+  }
+
+  .cabecalho-admin h1 {
+    font-size: 30px;
+  }
+
+  .grupo-botoes {
+    grid-template-columns: 1fr;
+  }
+}

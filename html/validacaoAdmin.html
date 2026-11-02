@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Validação Administrativa - Grand Prix 2026</title>
+
+    <link rel="stylesheet" href="../style/validacaoAdmin.css" />
+    <link rel="stylesheet" href="../style/navegacao.css" />
+  </head>
+
+  <body>
+    <main class="container-inicial">
+      <h1 class="titulo-sistema">ACESSO ADMINISTRATIVO</h1>
+
+      <p class="subtitulo-sistema">Grand Prix 2026</p>
+
+      <form id="formValidacaoAdmin">
+        <label for="inputCodigoAdmin">Código administrativo</label>
+
+        <input
+          type="password"
+          id="inputCodigoAdmin"
+          minlength="32"
+          maxlength="128"
+          autocomplete="off"
+          required
+        />
+
+        <button type="submit" id="btnEntrar">Entrar</button>
+      </form>
+
+      <button type="button" id="btnVoltar" class="btn-voltar btn-pagina-inicial">Voltar para a página inicial</button>
+    </main>
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/validacaoAdmin.js"></script>
+  </body>
+</html>

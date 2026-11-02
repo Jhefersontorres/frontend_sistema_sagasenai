@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciar Escuderias - Grand Prix 2026</title>
+    <link rel="stylesheet" href="../style/escuderias.css" />
+    <link rel="stylesheet" href="../style/navegacao.css" />
+  </head>
+  <body>
+    <main class="container-inicial" style="max-width: 600px">
+      <h2 class="titulo-sistema">Escuderias</h2>
+      <h3 class="subtitulo-sistema">Gerenciamento</h3>
+
+      <form id="formCadastroEscuderia">
+        <input
+          type="text"
+          id="inputNomeEscuderia"
+          placeholder="Insira o nome da escuderia"
+          aria-label="Nome da escuderia"
+          required
+          autocomplete="off"
+          maxlength="100"
+        />
+        <input
+          type="text"
+          id="inputTurma"
+          placeholder="Insira a turma (Ex.: 2º ADM Téc.111.001)"
+          aria-label="Turma"
+          required
+          autocomplete="off"
+          maxlength="20"
+        />
+        <input
+          type="text"
+          id="inputMentor"
+          placeholder="Insira o nome do mentor"
+          aria-label="Mentor"
+          required
+          maxlength="100"
+        />
+        <input
+          type="text"
+          id="inputCurso"
+          placeholder="Insira o curso"
+          aria-label="Curso"
+          required
+          maxlength="100"
+        />
+        <input
+          type="text"
+          id="inputEtapa"
+          placeholder="Insira a etapa"
+          aria-label="Etapa"
+          required
+          maxlength="50"
+        />
+        <input
+          type="text"
+          id="inputPeriodo"
+          placeholder="Insira o período"
+          aria-label="Período"
+          required
+          maxlength="50"
+        />
+        <input
+          type="text"
+          id="inputEscola"
+          placeholder="Insira o nome da escola"
+          aria-label="Escola"
+          required
+          maxlength="150"
+        />
+        <button type="submit">Submeter Escuderia</button>
+      </form>
+
+      <hr/>
+
+      <div class="container-busca">
+      <h3 class="subtitulo-sistema">Procurando algo?</h3>
+        <div>
+       <input
+        type="text"
+        id="inputBusca"
+        placeholder="Busque por nome, turma, mentor, curso ou escola..."
+       />
+       <ul
+        id="listaEscuderias"
+       ></ul>
+        </div>
+
+      <button id="btnBuscar">Buscar</button>
+      </div>
+      
+      <hr>
+      <div id="blocoDivulgacao"></div>
+     
+      <p class="creditos">
+        <a class="btn-pagina-inicial" href="paginaInicial.html">Voltar para a página inicial</a>
+      </p>
+
+    </main>
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/escuderias.js"></script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+body {
+  background-image: url(../assets/tela-de-fundo-padrao.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("../assets/tela-de-fundo-padrao-mobile.png");
+  }
+}
+
+.container-inicial {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(16, 44, 117, 0.15);
+    max-width: 400px;
+    width: 90%;
+}
+
+.titulo-sistema {
+    color: #f05a24;
+    margin: 0 0 5px 0;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+}
+
+.subtitulo-sistema {
+    color: #102c75;
+    margin: 0 0 35px 0;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.container-inicial input[type="text"]{
+    padding: 12px 16px;
+    width: 100%;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.container-inicial input[type="text"]:focus{
+    border-color: #f05a24;
+    box-shadow: 0 0 5px rgba(240, 90, 36, 0.3);
+}
+
+.container-inicial button{
+    background-color:#102c75;
+    color: #f0f0f0;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-inicial button:hover{
+    background-color: #090846;
+}
+
+.container-busca{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.grupo-input {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Alinhe com o tamanho máximo do seu input */
+  margin: 0 auto; /* Centraliza na tela, se desejar */
+}
+
+#inputBusca {
+  width: 100%;
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+
+#listaEscuderias {
+  position: absolute;
+  top: 100%; 
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none; 
+  border-radius: 0 0 8px 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  z-index: 1000;
+  display: none; 
+}
+
+
+#listaEscuderias li{
+    padding: 12px 15px;
+    color: #7a8294;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+#listaEscuderias li:hover{
+    background-color: #f1f1f1;
+    color: #f05a24;
+}
+
+#btnBuscar{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.creditos a{
+    color: #7a8294;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 35px;
+    font-weight: 500;
+}
+
+.creditos a:hover{
+    color: #f05a24;
+}
+
+div#blocoDivulgacao {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#blocoDivulgacao button {
+    background-color:#f05a24;
+    color: #f0f0f0;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+div#blocoDivulgacao button:hover {
+    background-color: #d04a1f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(240, 90, 36, 0.3);
+}
+
+div#blocoDivulgacao p.statusDivulgacao {
+    color: #f05a24;
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+div#blocoDivulgacao p#contagem {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #fcfcfd;
+    border-radius: 6px;
+    color: #090846;
+    box-shadow: 5px 20px 40px rgba(9, 28, 77, 1)5;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 400;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avaliação de Escuderias - Grand Prix 2026</title>
+
+    <link rel="stylesheet" href="../style/escuderiasAvaliadas.css">
+    <link rel="stylesheet" href="../style/navegacao.css">
+</head>
+
+<body>
+
+    <main class="container-inicial">
+
+        <h2 class="titulo-sistema">Escuderias</h2>
+
+        <p id="avaliadorLogado"></p>
+
+        <div class="area-avaliacoes">
+
+            <section class="bloco-busca">
+
+                <h3 class="subtitulo-sistema">Buscar Escuderia</h3>
+
+                <input
+                    type="text"
+                    id="inputBusca"
+                    placeholder="Insira escuderia, nome do mentor ou turma..."
+                >
+
+                <button id="btnBuscar">
+                    Pesquisar
+                </button>
+
+                <ul id="listaEscuderias"></ul>
+
+            </section>
+
+
+
+            <section class="bloco-minhas-avaliacoes">
+
+                <h3 class="subtitulo-sistema">Minhas Avaliações</h3>
+
+                <div id="minhasAvaliacoes">
+                    <p>Carregando avaliações...</p>
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <p class="creditos">
+
+            <a href="identificacaoAvaliador.html">
+                ← Voltar para a página de identificação
+            </a>
+
+        </p>
+
+        <a class="btn-pagina-inicial" href="paginaInicial.html">Voltar para a página inicial</a>
+
+    </main>
+
+
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/escuderiasAvaliadas.js"></script>
+
+</body>
+
+</html>
